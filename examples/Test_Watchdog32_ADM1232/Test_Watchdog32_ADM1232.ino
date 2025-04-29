@@ -24,8 +24,11 @@ void setup() {
   pinMode(ledPin, OUTPUT);  // Configura il pin del LED come output
 
   // Inizializza il watchdog con i pin specificati
+  watchdog.retrigger();  // Retriggere il watchdog
   watchdog.begin(triggerPin, enablePin);
+  watchdog.retrigger();  // Retriggere il watchdog
   watchdog.enable();  // Abilita il watchdog
+  watchdog.retrigger();  // Retriggere il watchdog
 }
 
 void loop() {
